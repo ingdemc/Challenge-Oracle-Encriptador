@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador | Oracle ONE + AluraLATAM</title>
+    <link rel=" icon" href="./assets/Vector.svg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="container">
+    <header>
+        <button type="button" onclick="reset()"> <img src="./assets/Vector.svg" alt="Logo de Alura" id="reset"  ></button>
+   
+    </header>
+    <main>
+        <form class="encriptador">
+            <textarea id="texto" placeholder="Ingrese el texto aqui" required></textarea>
+            <div class="warning">
+                <img src="./assets/exc.png" alt="" >
+                <p id="warning">Solo letras minúsculas y sin acentos</p>
+            </div>
+            <div class="btn_action">
+                <input type="button" value="Encriptar" onclick="encriptar()">
+                <input type="button" value="Desencriptar" onclick="desencriptar()">
+            </div>
+        </form>
+        <div class="resultado" id="resultado">
+            <div class="section" id="default">
+                <div class="img_muñeco">
+                    <img src="./assets/Muñeco.svg" alt="Muñeco">
+                </div>
+                <p>Ningún mensaje fue encontrado</p>
+                <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+            </div>
+            <div class="section oculto" id="result">
+                <textarea  id="texto_res" disabled></textarea>
+                <button id="copiar" onclick="copiar()">Copiar</button>
+            </div>
+        </div>
+    
+    </main>
+    <footer>
+        <p>© 2022 Todos los derechos reservados por Diana Marin | Oracle One + AluraLatam. </p>
+    </footer>
+</div>
+</body>
+<script src="./js/encriptador.js"></script>
+
+</html>
